@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: Poppins;
+}
+
+.apresentacao {
+    display: flex;
+    background: linear-gradient(135deg, #0097A8, #FF6F61);
+    height: 100dvh;
+    width: 100%;
+    font-family: Poppins;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    overflow: hidden;
+}
+
+.apresentacao h1 {
+    background: linear-gradient(90deg,#ffd700,#fff); 
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.apresentacao p {
+    font-size: 1.2rem;
+    color: white;
+    width: 35%;
+    text-align: center;
+}
+
+.apresentacao a {
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    background-color: white;
+    border-radius: 2rem;
+}
+
+.sobreMim {
+    display: flex;
+    height: 50dvh;
+    justify-content: center;
+    margin: 5rem 0 10rem 0;
+}
+
+.sobreMim h2 {
+    display: flex;
+    align-items: center;
+    color: #FF6F61;
+    margin-right: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.sobreMim__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    line-height: 1.6;
+}
+
+.sobreMim img {
+    width: 40%;
+    box-shadow: 0 0 30px #FF6F61;
+    border-radius: 1.5rempx;
+}
+
+.sobreMim__info p {
+    width: 40rem;
+}
+

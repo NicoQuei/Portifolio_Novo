@@ -173,7 +173,7 @@ body {
     font-size: 1rem;
     color: #ccc;
     margin-bottom: 1rem;
-    max-width: 100%;
+    max-width: 95%;
 }
 
 .animacao {
@@ -253,6 +253,15 @@ body {
 }
 
 @media (max-width: 800px) {
+    .apresentacao h1 {
+        font-size: 4rem;
+        max-width: 95%;
+    }
+
+    .apresentacao p {
+        width: 60%;
+    }
+
     .cardS {
         flex-direction: column;
         align-items: center;
@@ -269,5 +278,13 @@ body {
 
     .servicos__grade__card {
         width: 80%;
+    }
+
+    .servicos__grade__card {
+        width: 80%;
+    }
+
+    .servicos__grade__card p {
+        max-width: 80%;
     }
 }

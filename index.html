@@ -6,21 +6,35 @@
     <title>Portifolio Nícolas Queiroga</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" href="assets/logo N.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 </head>
 <body>
 
-    <header>
+    <header class="cabecalho">
 
-        <img src="assets/logo N.png" alt="logo N">
+        <section class="cabecalho__info">
+            <img src="assets/logo N.png" alt="logo N">
 
-        <section class="botoes">
-            <a href="" id="btn1">Inicio</a>
-            <a href="" id="btn2">Sobre mim</a>
-            <a href="" id="btn3">Projetos</a>
+            <section class="cabecalho__info__botoes">
+                <a href="#" id="" class="botoes__cabecalho">
+                    <i class="fa-solid fa-home home-icon"></i>
+                    <p id="btn1">Home</p>
+                </a>
+                
+                <a href="#" id="" class="botoes__cabecalho">
+                    <i class="fa-solid fa-user"></i>
+                    <p id="btn2">Sobre mim</p>
+                </a>
+
+                <a href="#" id="" class="botoes__cabecalho">
+                    <i class="fa-solid fa-briefcase"></i>
+                    <p id="btn3">Projetos</p>
+                </a>
+
+            </section>
+
+            <button id="btnIdioma" class="cabecalho__btn__func">en</button>
         </section>
-
-        <button id="btnIdioma">en</button>
-
     </header>
 
     <main>
@@ -31,14 +45,6 @@
             <a href="" id="apresentacao__a">Ver meus projetos</a>
         </section>
 
-        <!-- <section class="sobreMim">
-            <h2 class="animacao">Sobre mim</h2>
-
-            <div class="sobreMim__info">
-                <img src="assets/testew.jpg" alt="Minha foto" class="animacao">
-                <p class="animacao">Sou desenvolvedor front-end e back-end, especializado em JavaScript, Node.js e frameworks modernos. Meu objetivo é transformar ideias em soluções digitais funcionais e com design atrativo.</p>
-            </div> -->
-
         </section>
 
         <section class="projetos">
@@ -46,29 +52,29 @@
 
             <section class="cardS animacao">
 
-            <div class="card">
+            <a href="#" class="card">
                 <img src="assets/Orion.jpeg" alt="OrionStusios">
                 <div class="card__info">
                     <h3>Orion Stududios</h3>
                     <p id="card1__p">Projeto de catálogo digital construído com HTML, CSS e JavaScript, integrado ao Firebase para gerenciamento dos dados. O sistema foi projetado para ser responsivo e oferecer suporte a futuras funcionalidades de e-commerce, tornando a solução flexível e escalável.</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <img src="assets/Orion.jpeg" alt="OrionStusios">
                 <div class="card__info">
                     <h3>Orion Stududios</h3>
-                    <p>Catálogo de uma loja de Action Figures</p>
+                    <p id="card1__p">Projeto de catálogo digital construído com HTML, CSS e JavaScript, integrado ao Firebase para gerenciamento dos dados. O sistema foi projetado para ser responsivo e oferecer suporte a futuras funcionalidades de e-commerce, tornando a solução flexível e escalável.</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="card">
+            <a href="#" class="card">
                 <img src="assets/Orion.jpeg" alt="OrionStusios">
                 <div class="card__info">
                     <h3>Orion Stududios</h3>
-                    <p>Catálogo de uma loja de Action Figures</p>
+                    <p id="card1__p">Projeto de catálogo digital construído com HTML, CSS e JavaScript, integrado ao Firebase para gerenciamento dos dados. O sistema foi projetado para ser responsivo e oferecer suporte a futuras funcionalidades de e-commerce, tornando a solução flexível e escalável.</p>
                 </div>
-            </div>
+            </a>
 
             </section>
         </section>
@@ -78,36 +84,24 @@
             <h2 class="animacao" id="servicos">Meus serviços</h2>
 
             <section class="servicos__grade">
+
                 <div class="servicos__grade__card animacao">
-
-                    <div class="bolinha">
-                        <img src="assets/rocket.png" alt="foguete">
-                    </div>
-
-                    <h3 id="servico1__h3">Criação de Sites</h3>
+                    <i class="fa-solid fa-rocket"></i>
+                    <h3 id="servico1__h3">Criação de sites</h3>
                     <p id="servico1__p">Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
                 </div>
 
                 <div class="servicos__grade__card animacao">
-
-                    <div class="bolinha">
-                        <img src="assets/rocket.png" alt="foguete">
-                    </div>
-                    
-                    <h3 id="servico2__h3">Criação de Sites</h3>
-                    <p id="servico2__p">Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h3 id="servico1__h3">Landing Pages</h3>
+                    <p id="servico1__p">Páginas otimizadas para captar clientes e aumentar conversões.</p>
                 </div>
-
+                
                 <div class="servicos__grade__card animacao">
-
-                    <div class="bolinha">
-                        <img src="assets/rocket.png" alt="foguete">
-                    </div>
-                    
-                    <h3 id="servico3__h3">Criação de Sites</h3>
-                    <p id="servico3__h3">Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
+                    <i class="fa-solid fa-screwdriver-wrench"></i>
+                    <h3 id="servico1__h3">Desenvolvimento de sistemas</h3>
+                    <p id="servico1__p">Soluções interativas com login, banco de dados e painéis de gestão.</p>
                 </div>
-
         </section>
 
         

@@ -5,17 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portifolio Nícolas Queiroga</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="assets/logo N.png" type="image/x-icon">
 </head>
 <body>
 
-    <header></header>
+    <header>
+
+        <img src="assets/logo N.png" alt="logo N">
+
+        <section class="botoes">
+            <a href="" id="btn1">Inicio</a>
+            <a href="" id="btn2">Sobre mim</a>
+            <a href="" id="btn3">Projetos</a>
+        </section>
+
+        <button id="btnIdioma">en</button>
+
+    </header>
 
     <main>
         
         <section class="apresentacao">
             <h1>Nícolas Queiroga</h1>
-            <p>Desenvolvedor web apaixonado por criar experiências digitais modernas, elegantes e funcionais.</p>
-            <a href="">Ver meus projetos</a>
+            <p id="apresentacao__p">Desenvolvedor web apaixonado por criar experiências digitais modernas, elegantes e funcionais.</p>
+            <a href="" id="apresentacao__a">Ver meus projetos</a>
         </section>
 
         <!-- <section class="sobreMim">
@@ -29,7 +42,7 @@
         </section>
 
         <section class="projetos">
-            <h2 class="animacao">Projetos</h2>
+            <h2 class="animacao" id="projetos">Projetos</h2>
 
             <section class="cardS animacao">
 
@@ -37,7 +50,7 @@
                 <img src="assets/Orion.jpeg" alt="OrionStusios">
                 <div class="card__info">
                     <h3>Orion Stududios</h3>
-                    <p>Projeto de catálogo digital construído com HTML, CSS e JavaScript, integrado ao Firebase para gerenciamento dos dados. O sistema foi projetado para ser responsivo e oferecer suporte a futuras funcionalidades de e-commerce, tornando a solução flexível e escalável.</p>
+                    <p id="card1__p">Projeto de catálogo digital construído com HTML, CSS e JavaScript, integrado ao Firebase para gerenciamento dos dados. O sistema foi projetado para ser responsivo e oferecer suporte a futuras funcionalidades de e-commerce, tornando a solução flexível e escalável.</p>
                 </div>
             </div>
 
@@ -62,7 +75,7 @@
 
         <section class="servicos">
 
-            <h2 class="animacao">Meus serviços</h2>
+            <h2 class="animacao" id="servicos">Meus serviços</h2>
 
             <section class="servicos__grade">
                 <div class="servicos__grade__card animacao">
@@ -71,8 +84,8 @@
                         <img src="assets/rocket.png" alt="foguete">
                     </div>
 
-                    <h3>Criação de Sites</h3>
-                    <p>Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
+                    <h3 id="servico1__h3">Criação de Sites</h3>
+                    <p id="servico1__p">Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
                 </div>
 
                 <div class="servicos__grade__card animacao">
@@ -81,8 +94,8 @@
                         <img src="assets/rocket.png" alt="foguete">
                     </div>
                     
-                    <h3>Criação de Sites</h3>
-                    <p>Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
+                    <h3 id="servico2__h3">Criação de Sites</h3>
+                    <p id="servico2__p">Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
                 </div>
 
                 <div class="servicos__grade__card animacao">
@@ -91,14 +104,14 @@
                         <img src="assets/rocket.png" alt="foguete">
                     </div>
                     
-                    <h3>Criação de Sites</h3>
-                    <p>Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
+                    <h3 id="servico3__h3">Criação de Sites</h3>
+                    <p id="servico3__h3">Sites modernos, responsivos e rápidos para empresas e projetos pessoais.</p>
                 </div>
 
         </section>
 
         
-
+        <script src="https://unpkg.com/i18next@23.0.1/i18next.min.js"></script>
         <script src="app.js"></script>
 
     </main>

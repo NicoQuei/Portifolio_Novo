@@ -5,6 +5,16 @@
     margin: 0;
 }
 
+header {
+    display: flex;
+    justify-content: center;
+    background-color: lightgray;
+}
+
+header img {
+    width: 50px;
+}
+
 body {
     background-color: black;
     color: white;

@@ -14,7 +14,7 @@ body {
 .apresentacao {
     display: flex;
     background: linear-gradient(135deg, #0097A8, #FF6F61);
-    height: 100dvh;
+    height: 100vh;
     width: 100%;
     font-family: Poppins;
     flex-direction: column;
@@ -72,7 +72,7 @@ body {
     color: white;
 }
 
-.sobreMim {
+/* .sobreMim {
     display: flex;
     height: 50dvh;
     justify-content: center;
@@ -106,13 +106,14 @@ body {
 .sobreMim__info p {
     width: 75%;
     font-size: 1.1rem;
-}
+} */
 
 .projetos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    max-width: 100%;
 }
 
 .projetos h2 {
@@ -122,19 +123,18 @@ body {
 } 
 
 .cardS {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3,1fr);
     justify-content: center;
-    gap: 4rem;
-    padding: 2rem;
+    gap: 4%;
 }
 
 .card {
     background: #1a1a1a;
-    border-radius: 1rem;
+    border-radius: 2rem;
     overflow: hidden;
     box-shadow: 0 0 20px #FF6F61;
-    width: 30rem;
+    width: 26%;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -146,7 +146,6 @@ body {
 
 .card img {
     width: 100%;
-    display: block;
     filter: brightness(0.85);
     transition: filter 0.3s;
 }
@@ -167,12 +166,14 @@ body {
     margin: 0.3rem 0;
     font-size: 1.5rem;
     color: #FF6F61;
+    min-width: 10%;
 }
 
 .card p {
     font-size: 1rem;
     color: #ccc;
     margin-bottom: 1rem;
+    max-width: 100%;
 }
 
 .animacao {
@@ -201,10 +202,11 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 10rem;
+    max-width: 100%;
 }
 
 .servicos__grade {
-    display: grid;
+    display: flex;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     justify-content: center;
@@ -217,7 +219,7 @@ body {
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 20px #FF6F61;
-    width: 30rem;
+    width: 28%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -248,4 +250,24 @@ body {
 
 .bolinha img {
     width: 50px;
+}
+
+@media (max-width: 800px) {
+    .cardS {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .servicos__grade {
+        flex-direction: column;
+    }
+
+    .servicos__grade__card {
+        width: 80%;
+    }
 }

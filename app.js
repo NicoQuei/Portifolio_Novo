@@ -1,3 +1,15 @@
+// PRELOAD DA PAGINA
+
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+
+  setTimeout(() => {
+    preloader.classList.add('hidden');
+}, 500);
+});
+
+// Script da tradução da pagina
+
 i18next.init({
         lng: 'pt', // idioma padrão
         resources: {
@@ -49,12 +61,45 @@ i18next.init({
 
     // Botão para mudar idioma
     document.getElementById('btnIdioma').addEventListener('click', () => {
+
+        const preloader = document.getElementById('preloader');
+
+        preloader.classList.add('show');
+        preloader.classList.remove('hidden');
+
         const novoIdioma = i18next.language === 'pt' ? 'en' : 'pt';
         i18next.changeLanguage(novoIdioma, () => {
             updateText();
             document.getElementById('btnIdioma').textContent = i18next.language === 'pt' ? 'en' : 'pt';
         });
-    });
+
+        setTimeout(() => {
+            preloader.classList.remove('show');
+            preloader.classList.add('hidden');
+        }, 500); 
+});
+
+// Script que muda o tema da pagina
+
+const btnTema = document.getElementById('btnTema');
+const icon = btnTema.querySelector('i');
+const logo = document.getElementById('logo');
+
+btnTema.addEventListener('click', () => {
+    document.body.classList.toggle('day');
+    
+    if(document.body.classList.contains('day')){
+        icon.classList.remove('fa-sun');
+        icon.classList.add('fa-moon');
+        logo.src = "assets/logo N preta.png";
+    } else {
+        icon.classList.remove('fa-moon');
+        icon.classList.add('fa-sun');
+        logo.src = "assets/logo N.png";
+    }
+});
+
+// Script que faz os elementos aparecerem de acordo com o Scroll
 
 const elementos = document.querySelectorAll('.animacao');
 
@@ -72,3 +117,4 @@ function aparecerAoScroll() {
 
 window.addEventListener('scroll', aparecerAoScroll);
 aparecerAoScroll();
+

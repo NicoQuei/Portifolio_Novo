@@ -1,38 +1,86 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root {
+    --cor-fundo: black;
+    --cor-texto: white;
+    --cor-card-bg: #1a1a1a;
+    --cor-card-p: #ccc;
+    --cor-card-sombra: #FF6F61;
+    --cor-fundo-icon: white;
+}
+
 * {
     padding: 0;
     margin: 0;
     font-family: Poppins;
 }
 
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease;
+}
+
+#preloader.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+#preloader.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ccc;
+  border-top: 6px solid #FF6F61;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* CABEÇALHO */
+
 .cabecalho {
     display: flex;
     justify-content: center;
-    background-color: black;
+    background-color: var(--cor-card-bg);
     align-items: center;
     flex-direction: row;
     height: 8vh;
     width: 100%;
     position: fixed;
     z-index: 1;
+    transition: all 0.5s ease;
 }
 
 .cabecalho__info {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 40rem;
+    width: 90%; 
 }
 
 .cabecalho img {
     width: 70px;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
 .cabecalho img:hover {
-    transform: scale(1.3);
-    transition: all 0.5s ease;
+    transform: scale(1.3) rotate(360deg);
 }
 
 .cabecalho__info__botoes {
@@ -42,7 +90,7 @@
 
 .botoes__cabecalho {
     display: flex;
-    color: white;
+    color: var(--cor-texto);
     text-decoration: none;
     padding: 0.90rem 1.5rem;
     background: transparent;
@@ -51,26 +99,52 @@
     gap: 0.4rem;
     align-items: center;
     transition: all 0.5s ease;
+    align-content: center;
 }
 .botoes__cabecalho:hover {
     background-color: #FF6F61;
     transform: scale(1.1);
-    transition: all 0.5s ease;
+}
+
+.cabecalho__func {
+    display: flex;
+    gap: 1rem;
 }
 
 .cabecalho__btn__func {
-  width: 40px;
-  height: 40px;            
+  width: 45px;
+  height: 45px;            
   border-radius: 2rem;
   cursor: pointer;
   border: none;
   text-align: center;
+  font-size: 1.2rem;
+  transition: all 0.5s ease;
+  background-color: var(--cor-fundo-icon);
+  color: var(--cor-fundo);
+}
+
+.cabecalho__btn__func:hover {
+    background-color: #FF6F61;
+    transform: scale(1.1);
 }
 
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    transition: all 0.5s ease;
 }
+
+body.day {
+    --cor-fundo: white;
+    --cor-texto: black;
+    --cor-card-bg: #f1f1f1;
+    --cor-card-p: #000;
+    --cor-card-sombra: #FF6F61;
+    --cor-fundo-icon: black;
+}
+
+/* APRESENTAÇAO */
 
 .apresentacao {
     display: flex;
@@ -94,6 +168,7 @@ body {
     transform: translateY(50px);
     opacity: 0;
     animation: slideDown 1s forwards;
+    animation-delay: 0.6s;
 }
 
 @keyframes slideDown {
@@ -111,7 +186,7 @@ body {
     transform: translateY(50px);
     opacity: 0;
     animation: slideDown 1s forwards;
-    animation-delay: 0.3s;
+    animation-delay: 0.9s;
 }
 
 .apresentacao a {
@@ -125,15 +200,16 @@ body {
     transform: translateY(50px);
     opacity: 0;
     animation: slideDown 1s forwards;
-    animation-delay: 0.6s;
+    animation-delay: 1.2s;
     transition: all 0.5s ease;
 }
 
 .apresentacao a:hover {
     background-color: #FF6F61;
     color: white;
-    transition: all 0.5s ease;
 }
+
+/* PROJETOS */
 
 .projetos {
     display: flex;
@@ -157,14 +233,14 @@ body {
 }
 
 .card {
-    background: #1a1a1a;
+    background: var(--cor-card-bg);
     border-radius: 2rem;
     overflow: hidden;
-    box-shadow: 0 0 20px #FF6F61;
-    width: 26%;
+    box-shadow: 0 0 20px var(--cor-card-sombra);
+    width: 23%;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.5s, box-shadow 0.5s;
 }
 
 .card:hover {
@@ -174,8 +250,7 @@ body {
 
 .card img {
     width: 100%;
-    filter: brightness(0.85);
-    transition: filter 0.3s;
+    filter: brightness(0.90);
 }
 
 .card img:hover {
@@ -199,7 +274,7 @@ body {
 
 .card p {
     font-size: 1rem;
-    color: #ccc;
+    color: var(--cor-card-p);
     margin-bottom: 1rem;
     max-width: 95%;
 }
@@ -243,7 +318,7 @@ body {
 
 .servicos__grade__card {
     display: flex;
-    background: #1a1a1a;
+    background: var(--cor-card-bg);
     border-radius: 1rem;
     overflow: hidden;
     box-shadow: 0 0 20px #FF6F61;
@@ -254,28 +329,29 @@ body {
     height: 15rem;
     text-align: center;
     gap: 1rem;
+    transition: all 0.5s ease;
 }
 
 .fa-rocket {
-    color: black;
+    color: var(--cor-card-bg);
     font-size: 2.5rem;
-    background-color: white;
+    background-color: var(--cor-fundo-icon);
     padding: 0.8rem;
     border-radius: 50%;
 }
 
 .fa-laptop-code {
-    color: black;
+    color: var(--cor-card-bg);
     font-size: 2.5rem;
-    background-color: white;
+    background-color: var(--cor-fundo-icon);
     padding: 0.8rem 0.6rem;
     border-radius: 50%;
 }
 
 .fa-screwdriver-wrench {
-    color: black;
+    color: var(--cor-card-bg);
     font-size: 2.5rem;
-    background-color: white;
+    background-color: var(--cor-fundo-icon);
     padding: 0.8rem;
     border-radius: 50%;
 }
@@ -287,9 +363,11 @@ body {
 
 .servicos__grade__card p {
     font-size: 1rem;
-    color: #ccc;
+    color: var(--cor-card-p);
     width: 90%;
 }
+
+
 
 
 @media (max-width: 800px) {
@@ -327,4 +405,37 @@ body {
     .servicos__grade__card p {
         max-width: 80%;
     }
+
+    .cabecalho {
+        height: auto;
+        position: relative;
+        padding: 0.5rem 0;
+    }
+
+    .cabecalho img {
+        width: 50px;
+    }
+
+    .cabecalho__info {
+        flex-direction: column;
+        gap: 0.3rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cabecalho__info__botoes {
+        flex-direction: row;
+        text-align: center;
+    }
+
+    .botoes__cabecalho {
+        font-size: 0.7rem;
+    }
+
+    .cabecalho__btn__func {
+        width: 30px;
+        height: 30px;  
+        font-size: 0.7rem;
+    }
+
 }

@@ -9,10 +9,13 @@
 .cabecalho {
     display: flex;
     justify-content: center;
-    background-color: gray;
+    background-color: black;
     align-items: center;
     flex-direction: row;
     height: 8vh;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
 }
 
 .cabecalho__info {
@@ -24,6 +27,12 @@
 
 .cabecalho img {
     width: 70px;
+    transition: all 0.5s ease;
+}
+
+.cabecalho img:hover {
+    transform: scale(1.3);
+    transition: all 0.5s ease;
 }
 
 .cabecalho__info__botoes {
@@ -33,7 +42,7 @@
 
 .botoes__cabecalho {
     display: flex;
-    color: black;
+    color: white;
     text-decoration: none;
     padding: 0.90rem 1.5rem;
     background: transparent;
@@ -41,9 +50,11 @@
     font-size: 1.2rem;
     gap: 0.4rem;
     align-items: center;
+    transition: all 0.5s ease;
 }
 .botoes__cabecalho:hover {
-    background-color: white;
+    background-color: #FF6F61;
+    transform: scale(1.1);
     transition: all 0.5s ease;
 }
 
@@ -115,11 +126,13 @@ body {
     opacity: 0;
     animation: slideDown 1s forwards;
     animation-delay: 0.6s;
+    transition: all 0.5s ease;
 }
 
 .apresentacao a:hover {
     background-color: #FF6F61;
     color: white;
+    transition: all 0.5s ease;
 }
 
 .projetos {
@@ -286,7 +299,7 @@ body {
     }
 
     .apresentacao p {
-        width: 80%;
+        width: 60%;
     }
 
     .cardS {

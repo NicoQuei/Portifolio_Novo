@@ -7,7 +7,7 @@
     --cor-card-p: #ccc;
     --cor-card-sombra: #FF6F61;
     --cor-fundo-icon: white;
-    --cor--cabecalho: #000003;
+    --cor--cabecalho: #000000B3;
 }
 
 * {
@@ -70,7 +70,7 @@
 
 .cabecalho.scroll {
     height: 6vh;
-    background-color: var(--cor-cabecalho); 
+    background-color: var(--cor--cabecalho);
     backdrop-filter: blur(10px);
 }
 
@@ -160,12 +160,12 @@ body.day {
     --cor-card-p: #000;
     --cor-card-sombra: #FF6F61;
     --cor-fundo-icon: black;
-    --cor-cabecalho: #FFFFFFB3;
+    --cor--cabecalho: #FFFFFFB3;
 }
 
 .subtitulo {
     font-size: 1.2rem;
-    color: #ccc;
+    color: var(--cor-texto);
     text-align: center;
     margin-bottom: 4rem;
     font-weight: 300;

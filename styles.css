@@ -236,7 +236,6 @@ body.day {
     background: var(--cor-card-bg);
     border-radius: 2rem;
     overflow: hidden;
-    box-shadow: 0 0 20px var(--cor-card-sombra);
     width: 23%;
     cursor: pointer;
     text-decoration: none;
@@ -245,7 +244,8 @@ body.day {
 
 .card:hover {
     transform: translateY(-10px) scale(1.08);
-    box-shadow: 0 0 20px #0097A8;
+        box-shadow: 0 0 20px var(--cor-card-sombra);
+
 }
 
 .card img {

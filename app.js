@@ -118,3 +118,31 @@ function aparecerAoScroll() {
 window.addEventListener('scroll', aparecerAoScroll);
 aparecerAoScroll();
 
+//Função pra abrir nav no celular
+
+const hamb = document.getElementById('hamburguer');
+const i = hamb.querySelector('i');
+
+const hamburguer = document.getElementById("hamburguer");
+const menu = document.getElementById("menu");
+
+hamburguer.addEventListener("click", () => {
+  menu.classList.toggle("active");
+  if (menu.classList.contains("active")) {
+    i.classList.remove("fa-bars");
+    i.classList.add("fa-xmark");
+  } else {
+    i.classList.remove("fa-xmark");
+    i.classList.add("fa-bars");
+  }
+});
+
+const cabecalho = document.querySelector('.cabecalho');
+
+window.addEventListener('scroll', () => {
+    if(window.scrollY > 50) {
+        cabecalho.classList.add('scroll');
+    } else {
+        cabecalho.classList.remove('scroll');
+    }
+});

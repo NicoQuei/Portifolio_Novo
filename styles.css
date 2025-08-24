@@ -3,7 +3,7 @@
 :root {
     --cor-fundo: black;
     --cor-texto: white;
-    --cor-card-bg: #1a1a1a;
+    --cor-card-bg: #1f1f1f;
     --cor-card-p: #ccc;
     --cor-card-sombra: #FF6F61;
     --cor-fundo-icon: white;
@@ -65,6 +65,12 @@
     position: fixed;
     z-index: 1;
     transition: all 0.5s ease;
+}
+
+.cabecalho.scroll {
+    height: 6vh;
+    background-color: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(10px);
 }
 
 .cabecalho__info {
@@ -129,6 +135,17 @@
     transform: scale(1.1);
 }
 
+.hamburguer {
+  display: none; /* desktop não mostra */
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--cor-texto);
+}
+
+/* BODY */
+
 body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
@@ -138,10 +155,22 @@ body {
 body.day {
     --cor-fundo: white;
     --cor-texto: black;
-    --cor-card-bg: #f1f1f1;
+    --cor-card-bg: #dfdfdf;
     --cor-card-p: #000;
     --cor-card-sombra: #FF6F61;
     --cor-fundo-icon: black;
+}
+
+.subtitulo {
+    font-size: 1.2rem;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-weight: 300;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    max-width: 90%;
 }
 
 /* APRESENTAÇAO */
@@ -163,7 +192,7 @@ body.day {
     background-clip: text;
     color: transparent;
     font-weight: 700;
-    font-size: 5rem;
+    font-size: 5.5rem;
     text-align: center;
     transform: translateY(50px);
     opacity: 0;
@@ -222,7 +251,8 @@ body.day {
 .projetos h2 {
     color: #FF6F61;
     font-size: 3rem;
-    margin: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
 } 
 
 .cardS {
@@ -244,7 +274,7 @@ body.day {
 
 .card:hover {
     transform: translateY(-10px) scale(1.08);
-        box-shadow: 0 0 20px var(--cor-card-sombra);
+    box-shadow: 0 0 20px var(--cor-card-sombra);
 
 }
 
@@ -294,7 +324,8 @@ body.day {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
     font-size: 3rem;
     color: #FF6F61;
 }
@@ -321,7 +352,6 @@ body.day {
     background: var(--cor-card-bg);
     border-radius: 1rem;
     overflow: hidden;
-    box-shadow: 0 0 20px #FF6F61;
     width: 28%;
     flex-direction: column;
     justify-content: center;
@@ -371,13 +401,35 @@ body.day {
 
 
 @media (max-width: 800px) {
+    .hamburguer {
+        display: block;
+    }
+    
+    .cabecalho__info__botoes {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        top: 8.5vh;
+        right: 1vh;
+        background: var(--cor-card-bg);
+        position: absolute;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .cabecalho__info__botoes.active {
+        display: flex; 
+    }
+    
     .apresentacao h1 {
         font-size: 4rem;
         max-width: 95%;
     }
 
     .apresentacao p {
-        width: 60%;
+        width: 80%;
     }
 
     .cardS {
@@ -408,8 +460,12 @@ body.day {
 
     .cabecalho {
         height: auto;
-        position: relative;
         padding: 0.5rem 0;
+        filter: opacity(1);
+    }
+
+    .cabecalho.scroll {
+        height: 5vh;
     }
 
     .cabecalho img {
@@ -417,25 +473,19 @@ body.day {
     }
 
     .cabecalho__info {
-        flex-direction: column;
-        gap: 0.3rem;
+        flex-direction: row;
         align-items: center;
         text-align: center;
     }
 
-    .cabecalho__info__botoes {
-        flex-direction: row;
-        text-align: center;
-    }
-
     .botoes__cabecalho {
-        font-size: 0.7rem;
+        font-size: 1.1rem;
     }
 
     .cabecalho__btn__func {
-        width: 30px;
-        height: 30px;  
-        font-size: 0.7rem;
+        width: 40px;
+        height: 40px;  
+        font-size: 1.1rem;
     }
 
 }

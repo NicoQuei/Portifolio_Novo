@@ -7,6 +7,7 @@
     --cor-card-p: #ccc;
     --cor-card-sombra: #FF6F61;
     --cor-fundo-icon: white;
+    --cor--cabecalho: #000003;
 }
 
 * {
@@ -69,7 +70,7 @@
 
 .cabecalho.scroll {
     height: 6vh;
-    background-color: rgba(0, 0, 0, 0.7); 
+    background-color: var(--cor-cabecalho); 
     backdrop-filter: blur(10px);
 }
 
@@ -159,6 +160,7 @@ body.day {
     --cor-card-p: #000;
     --cor-card-sombra: #FF6F61;
     --cor-fundo-icon: black;
+    --cor-cabecalho: #FFFFFFB3;
 }
 
 .subtitulo {

@@ -137,6 +137,8 @@ hamburguer.addEventListener("click", () => {
   }
 });
 
+//Cabecalho diminui ao scroll
+
 const cabecalho = document.querySelector('.cabecalho');
 
 window.addEventListener('scroll', () => {

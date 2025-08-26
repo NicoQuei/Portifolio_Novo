@@ -470,6 +470,135 @@ body.day {
     font-size: 2.5rem;
 }
 
+/* FOOTER */
+
+footer {
+    display: flex;
+    width: 100%;    
+    background-color: var(--cor-card-bg);
+    color: var(--cor-texto);
+}
+
+.enquadra {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.footer__sobre {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+    border-bottom: 1px solid var(--cor-texto);
+}
+
+.footer__sobre__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    margin: 2rem 0;
+}
+
+.footer__sobre__info h3 {
+    font-size: 1.5rem;
+    color: #4f46e5;
+    margin-bottom: 0.8rem;
+}
+
+.footer__sobre__info p {
+    width: 55%;
+}
+.footer__sobre__redes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.footer__sobre__redes i {
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    border-radius: 0.5rem;
+    text-decoration: none;
+    background-color: var(--cor-texto);
+    color: var(--cor-card-bg);
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    margin: 2rem 0;
+}
+
+.footer__links__nav nav{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.nav__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    gap: 0.5rem;
+}
+
+.nav__item a {
+    color: var(--cor-texto);
+    text-decoration: none;
+}
+
+.nav__item a:hover {
+    color: #00A3FF;
+    transition: all 0.5s ease;
+}
+
+.footer__links__contato {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer__links__contato__item {
+    display: flex;
+    align-items: center;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.footer__final {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    border-top: 1px solid var(--cor-texto);
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer__final__links {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.footer__final__links a {
+    text-decoration: none;
+    color: var(--cor-texto);
+}
+
+.footer__final__links a:hover {
+    color: #00A3FF;
+    transition: all 0.5s ease;
+}
+
 
 /* RESPONSIVIDADE */
 

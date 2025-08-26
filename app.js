@@ -21,8 +21,9 @@ i18next.init({
                     apresentacao__p: "Desenvolvedor web apaixonado por criar experiências digitais modernas, elegantes e funcionais.",
                     apresentacao__a: "Ver meus projetos",
                     projetos: "Projetos",
-                    card1__p: "Projeto de catálogo digital construído com HTML, CSS e JavaScript, integrado ao Firebase para gerenciamento dos dados. O sistema foi projetado para ser responsivo e oferecer suporte a futuras funcionalidades de e-commerce, tornando a solução flexível e escalável.",
+                    card1__p: "Sistema que calcula a melhor combinação de caixas em um espaço 2D, maximizando a ocupação sem alterar suas orientações.",
                     servicos: "Meus serviços",
+                    card3__p: "Sistema que calcula a melhor combinação de caixas em um espaço 2D, maximizando a ocupação sem alterar suas orientações.",
                     servico1__h3: "Criação de Sites",
                     servico1__p: "Sites modernos, responsivos e rápidos para empresas e projetos pessoais.",
                 }

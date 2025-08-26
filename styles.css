@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
-    --cor-fundo: #060a1c;          /* fundo geral escuro */
-    --cor-texto: #E4E6EB;          /* texto principal suave */
-    --cor-titulo: #00D1FF;         /* títulos e destaques em azul claro */
-    --cor-card-bg: #1A1C29;        /* fundo dos cards */
-    --cor-card-p: #B0B3C0;         /* texto dentro dos cards */
-    --cor-card-sombra: #00D1FF;    /* sombra hover dos cards */
-    --cor-fundo-icon: #E4E6EB;     /* fundo dos ícones */
-    --cor--cabecalho: #1A1C29CC;   /* cabeçalho semitransparente */
+    --cor-fundo: #060a1c;         
+    --cor-texto: #E4E6EB;         
+    --cor-titulo: #00D1FF;        
+    --cor-card-bg: #1A1C29;      
+    --cor-card-p: #B0B3C0;
+    --cor-card-sombra: #00D1FF; 
+    --cor-fundo-icon: #E4E6EB;   
+    --cor--cabecalho: #1A1C29CC;   
 }
 
 * {
@@ -144,7 +144,7 @@ html {
 }
 
 .hamburguer {
-  display: none; /* desktop não mostra */
+  display: none; 
   font-size: 1.8rem;
   background: none;
   border: none;
@@ -160,13 +160,13 @@ body {
 }
 
 body.day {
-    --cor-fundo: #e6e7e9;          /* fundo claro */
-    --cor-texto: #0F111A;          /* texto escuro */
-    --cor-card-bg: #FFFFFF;        /* fundo dos cards claros */
-    --cor-card-p: #3A3D4D;         /* texto dentro dos cards */
-    --cor-card-sombra: #00D1FF;    /* sombra hover */
-    --cor-fundo-icon: #0F111A;     /* fundo dos ícones */
-    --cor--cabecalho: #FFFFFFCC;   /* cabeçalho semitransparente */
+    --cor-fundo: #e6e7e9;
+    --cor-texto: #0F111A;
+    --cor-card-bg: #FFFFFF;
+    --cor-card-p: #3A3D4D;
+    --cor-card-sombra: #00D1FF;
+    --cor-fundo-icon: #0F111A;
+    --cor--cabecalho: #FFFFFFCC;
 }
 
 .subtitulo {

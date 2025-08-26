@@ -711,6 +711,10 @@ footer {
         font-size: 1.1rem;
     }
 
+    .footer__sobre__info p{
+        width: 80%;
+    }
+
     .footer__sobre__redes {
         flex-direction: column;
         margin-right: 3rem;
@@ -718,6 +722,15 @@ footer {
 
     .footer__links__contato {
         flex-direction: column;
+    }
+
+    .footer__links__nav nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__links__contato__item p {
+        max-width: 90%;
     }
 
     .footer__final {

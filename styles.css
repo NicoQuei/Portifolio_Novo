@@ -236,7 +236,7 @@ body.day {
 
 .apresentacao a:hover {
     background-color: #00D1FF;
-    color: #E4E6EB;
+    color: var(--cor-fundo);
 }
 
 /* PROJETOS */

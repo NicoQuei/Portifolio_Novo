@@ -175,7 +175,6 @@ body.day {
     text-align: center;
     margin-bottom: 3rem;
     font-weight: 300;
-    opacity: 0;
     transform: translateY(20px);
     transition: all 0.5s ease;
     max-width: 90%;
@@ -202,28 +201,14 @@ body.day {
     font-weight: 700;
     font-size: 5em;
     text-align: center;
-    transform: translateY(50px);
-    opacity: 0;
-    animation: slideDown 1s forwards;
-    animation-delay: 0.6s;
 }
 
-@keyframes slideDown {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 .apresentacao p {
     font-size: 1.3rem;
     color: white;
     width: 40%;
     text-align: center;
-    transform: translateY(50px);
-    opacity: 0;
-    animation: slideDown 1s forwards;
-    animation-delay: 0.9s;
 }
 
 .apresentacao a {
@@ -236,11 +221,6 @@ body.day {
     padding: 1rem 1.5rem;
     background-color: white;
     border-radius: 2rem;
-    transform: translateY(50px);
-    opacity: 0;
-    animation: slideDown 1s forwards;
-    animation-delay: 1.2s;
-    transition: all 0.5s ease;
 }
 
 .apresentacao a:hover {
@@ -278,15 +258,15 @@ body.day {
     overflow: hidden;
     border-radius: 1rem;
 }
+
 .card:hover {
-    transform: scale(1.05);
     box-shadow: 0 0 25px var(--cor-card-sombra);
 }
 
 .card img {
     display: block;
     width: 100%;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .card__info {
@@ -321,14 +301,7 @@ body.day {
     max-width: 90%;
 } 
 
-.animacao {
-    opacity: 0;
-    transition: all 0.5s linear;
-}
-
-.animacao.aparecer {
-    opacity: 1;
-}
+/* SERVICOS */
 
 .servicos h2 {
     display: flex;
@@ -366,6 +339,7 @@ body.day {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     height: 15rem;
     text-align: center;
     gap: 1rem;
@@ -400,6 +374,7 @@ body.day {
 .servicos__grade__card h3{
     color: var(--cor-titulo);
     font-size: 1.5rem;
+    width: 90%;
 }
 
 .servicos__grade__card p {
@@ -435,16 +410,11 @@ body.day {
 }
 
 .skills__grade__tipo {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
     justify-items: center;
     justify-content: center;
     align-items: center;
     gap:5rem;
-}
-
-.ferramentas {
-    grid-template-columns: repeat(4, 1fr);
 }
 
 .skills__grade__card {
@@ -655,13 +625,32 @@ footer {
         align-items: center;
         gap: 4rem;
     }
+    
 
     .card {
         width: 90%;
+        text-decoration: none;
+    }
+    
+    .card__info {
+        position: relative;
+        opacity: 1;
+    }
+    
+    .card__info h3 {
+        font-size: 1.3rem;
+        margin-top: 0.4rem;
+    }
+
+    .card__info p {
+        font-size: 1.1rem;
+        margin-bottom: 0.4rem;
     }
 
     .servicos__grade {
         grid-template-columns: repeat(2, 1fr);
+        text-align: center;
+        gap: 1rem;
     }   
 
     .servicos__grade__card {
@@ -670,6 +659,7 @@ footer {
 
     .servicos__grade__card h3 {
         font-size: 1.2rem;
+        max-width: 80%;
     }
 
     .servicos__grade__card p {
@@ -678,8 +668,14 @@ footer {
     }
 
     .skills__grade__tipo {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-content: center;
+        justify-items: center;
+    }
+
+    .skills__grade__tipo.centraliza > :nth-child(3) {
+        grid-column: 1/ -1;
+        justify-self: center;
     }
 
     .cabecalho {

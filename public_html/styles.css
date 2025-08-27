@@ -754,3 +754,37 @@ footer {
     }
 
 }
+
+
+/* SOBRE MIM */
+
+.sobreMim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.apresentacao__sobreMim {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 5rem;
+    gap: 30%;
+}
+
+.apresentacao__sobreMim__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+}
+
+.apresentacao__sobreMim__texto h1 {
+    color: var(--cor-titulo);
+    font-size: 3.5rem;
+}
+
+.apresentacao__sobreMim img {
+    width: 10%;
+}

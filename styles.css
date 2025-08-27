@@ -679,6 +679,7 @@ footer {
 
     .skills__grade__tipo {
         grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
     }
 
     .cabecalho {

@@ -139,3 +139,36 @@ window.addEventListener('scroll', () => {
         cabecalho.classList.remove('scroll');
     }
 });
+
+// Cria particulas
+
+particlesJS("particles-js", {
+  "particles": {
+    "number": {
+      "value": 50
+    },
+    "color": {
+      "value": "#00D1FF"
+    },
+    "shape": {
+      "type": "circle"
+    },
+    "opacity": {
+      "value": 0.5
+    },
+    "size": {
+      "value": 3
+    },
+    "line_linked": {
+      "enable": true,
+      "distance": 150,
+      "color": "#00D1FF",
+      "opacity": 0.4,
+      "width": 1
+    },
+    "move": {
+      "enable": true,
+      "speed": 2
+    }
+  }
+});

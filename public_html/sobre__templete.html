@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Mim - Nícolas Queiroga</title>
+    <link rel="shortcut icon" href="assets/logo N.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --cor-fundo: #060a1c;         
+            --cor-texto: #E4E6EB;         
+            --cor-titulo: #00D1FF;        
+            --cor-card-bg: #1A1C29;      
+            --cor-card-p: #B0B3C0;
+            --cor-card-sombra: #00D1FF; 
+            --cor-fundo-icon: #E4E6EB;   
+            --cor--cabecalho: #1A1C29CC;   
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--cor-fundo);
+            color: var(--cor-texto);
+            line-height: 1.6;
+        }
+
+        body.day {
+            --cor-fundo: #e6e7e9;
+            --cor-texto: #0F111A;
+            --cor-card-bg: #FFFFFF;
+            --cor-card-p: #3A3D4D;
+            --cor-card-sombra: #00D1FF;
+            --cor-fundo-icon: #0F111A;
+            --cor--cabecalho: #FFFFFFCC;
+        }
+
+        /* CABEÇALHO */
+        .cabecalho {
+            display: flex;
+            justify-content: center;
+            background-color: var(--cor-card-bg);
+            align-items: center;
+            flex-direction: row;
+            height: 8vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.5s ease;
+        }
+
+        .cabecalho.scroll {
+            height: 6vh;
+            background-color: var(--cor--cabecalho);
+            backdrop-filter: blur(10px);
+        }
+
+        .cabecalho__info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+        }
+
+        .cabecalho img {
+            width: 70px;
+            transition: all 0.5s ease;
+        }
+
+        .cabecalho img:hover {
+            transform: scale(1.2) rotate(360deg);
+        }
+
+        .cabecalho__info__botoes {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .botoes__cabecalho {
+            display: flex;
+            color: var(--cor-texto);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border-radius: 1rem;
+            font-size: 1.2rem;
+            gap: 0.4rem;
+            align-items: center;
+            transition: all 0.5s ease;
+        }
+
+        .botoes__cabecalho:hover {
+            background-color: #00D1FF;
+            transform: scale(1.1);
+        }
+
+        .cabecalho__func {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .cabecalho__btn__func {
+            width: 38px;
+            height: 38px;            
+            border-radius: 2rem;
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            font-size: 1.4rem;
+            transition: all 0.5s ease;
+            background-color: var(--cor-fundo-icon);
+            color: var(--cor-fundo);
+        }
+
+        .cabecalho__btn__func:hover {
+            background-color: #00D1FF;
+            transform: scale(1.1);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            display: flex;
+            background: var(--cor-fundo);
+            min-height: 50vh;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin-top: 8vh;
+            position: relative;
+            overflow: hidden;
+            padding: 3rem 0;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 209, 255, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero__conteudo {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        .hero__texto {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .hero__texto h1 {
+            color: var(--cor-titulo);
+            font-weight: 700;
+            font-size: 3.5em;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero__texto .destaque {
+            color: var(--cor-texto);
+            font-size: 1.4rem;
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+
+        .hero__texto p {
+            font-size: 1.1rem;
+            color: var(--cor-card-p);
+            line-height: 1.7;
+        }
+
+        .hero__foto {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero__foto-container {
+            position: relative;
+            width: 280px;
+            height: 280px;
+        }
+
+        .hero__foto-container::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            background: linear-gradient(45deg, var(--cor-titulo), transparent, var(--cor-titulo));
+            border-radius: 50%;
+            z-index: -1;
+            animation: rotate 8s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .hero__foto img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--cor-fundo);
+        }
+
+        /* SEÇÕES PRINCIPAIS */
+        .secao {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            max-width: 100%;
+            padding: 4rem 0;
+        }
+
+        .secao h2 {
+            color: var(--cor-titulo);
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .subtitulo {
+            font-size: 1.2rem;
+            color: var(--cor-texto);
+            text-align: center;
+            margin-bottom: 3rem;
+            font-weight: 300;
+            max-width: 80%;
+        }
+
+        /* BIOGRAFIA */
+        .biografia {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 4rem;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .biografia__foto {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .foto-perfil {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--cor-titulo);
+            box-shadow: 0 0 30px rgba(0, 209, 255, 0.3);
+        }
+
+        .biografia__texto {
+            flex: 2;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .biografia__texto p {
+            font-size: 1.1rem;
+            color: var(--cor-card-p);
+            text-align: justify;
+        }
+
+        /* EXPERIÊNCIA */
+        .experiencia__timeline {
+            width: 90%;
+            max-width: 1000px;
+        }
+
+        .timeline__item {
+            display: flex;
+            background: var(--cor-card-bg);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            gap: 2rem;
+            align-items: center;
+            transition: all 0.5s ease;
+            border-left: 4px solid var(--cor-titulo);
+        }
+
+        .timeline__item:hover {
+            box-shadow: 0 0 25px var(--cor-card-sombra);
+            transform: translateY(-5px);
+        }
+
+        .timeline__icon {
+            background-color: var(--cor-titulo);
+            color: var(--cor-fundo);
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            min-width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .timeline__conteudo h3 {
+            color: var(--cor-titulo);
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline__conteudo .periodo {
+            color: var(--cor-texto);
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .timeline__conteudo p {
+            color: var(--cor-card-p);
+            font-size: 1rem;
+        }
+
+        /* COLABORAÇÃO */
+        .colaboracao__container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .colaboracao__principal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--cor-card-bg);
+            border-radius: 1.5rem;
+            padding: 3rem;
+            gap: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .colaboracao__principal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, transparent, rgba(0, 209, 255, 0.05), transparent);
+            z-index: 0;
+        }
+
+        .colaboracao__texto {
+            flex: 2;
+            position: relative;
+            z-index: 1;
+        }
+
+        .colaboracao__texto h3 {
+            color: var(--cor-titulo);
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .colaboracao__texto p {
+            font-size: 1.2rem;
+            color: var(--cor-card-p);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .colaboracao__cta {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn__contato, .btn__github {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn__contato {
+            background: var(--cor-titulo);
+            color: var(--cor-fundo);
+        }
+
+        .btn__contato:hover {
+            background: #00A3FF;
+            transform: scale(1.05);
+        }
+
+        .btn__github {
+            background: transparent;
+            color: var(--cor-titulo);
+            border: 2px solid var(--cor-titulo);
+        }
+
+        .btn__github:hover {
+            background: var(--cor-titulo);
+            color: var(--cor-fundo);
+            transform: scale(1.05);
+        }
+
+        .colaboracao__visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .colaboracao__icone {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, var(--cor-titulo), #00A3FF);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .colaboracao__icone i {
+            font-size: 4rem;
+            color: white;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .projetos__tipos {
+            background: var(--cor-card-bg);
+            border-radius: 1rem;
+            padding: 2.5rem;
+        }
+
+        .projetos__tipos h4 {
+            color: var(--cor-titulo);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .tipos__lista {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tipo__item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(0, 209, 255, 0.05);
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 209, 255, 0.1);
+        }
+
+        .tipo__item:hover {
+            background: rgba(0, 209, 255, 0.1);
+            border-color: var(--cor-titulo);
+            transform: translateX(5px);
+        }
+
+        .tipo__item i {
+            font-size: 1.5rem;
+            color: var(--cor-titulo);
+            min-width: 30px;
+        }
+
+        .tipo__item span {
+            color: var(--cor-texto);
+            font-weight: 500;
+        }
+
+        /* FOOTER */
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;    
+            background-color: var(--cor-card-bg);
+            color: var(--cor-texto);
+        }
+
+        .enquadra {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .footer__sobre {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 95%;
+            border-bottom: 1px solid var(--cor-texto);
+        }
+
+        .footer__sobre__info {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            margin: 2rem 0;
+        }
+
+        .footer__sobre__info h3 {
+            font-size: 1.5rem;
+            color: var(--cor-titulo);
+            margin-bottom: 0.8rem;
+        }
+
+        .footer__sobre__info p {
+            width: 65%;
+        }
+
+        .footer__sobre__redes {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .footer__sobre__redes i {
+            padding: 0.6rem;
+            font-size: 1.2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            background-color: var(--cor-texto);
+            color: var(--cor-card-bg);
+            transition: all 0.5s ease;
+        }
+
+        .footer__sobre__redes i:hover {
+            transform: scale(1.15);
+        }
+
+        .footer__final {
+            display: flex;
+            justify-content: center;
+            width: 95%;
+            border-top: 1px solid var(--cor-texto);
+            padding-top: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* RESPONSIVIDADE */
+            @media (max-width: 800px) {
+            .hero__conteudo {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero__texto h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero__foto-container {
+                width: 220px;
+                height: 220px;
+            }
+
+            .biografia {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .foto-perfil {
+                width: 250px;
+                height: 250px;
+            }
+
+            .timeline__item {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .colaboracao__principal {
+                flex-direction: column;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .colaboracao__cta {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .tipos__lista {
+                grid-template-columns: 1fr;
+            }
+
+            .interesses__grade {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 1rem;
+            }
+
+            .cabecalho img {
+                width: 50px;
+            }
+
+            .footer__sobre {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .footer__sobre__info p {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header class="cabecalho">
+        <section class="cabecalho__info">
+            <img src="assets/logo N.png" alt="logo N" id="logo">
+
+            <nav>
+                <section class="cabecalho__info__botoes">
+                    <a href="index.html" class="botoes__cabecalho">
+                        <i class="fa-solid fa-home"></i>
+                        <p>Home</p>
+                    </a>
+                    
+                    <a href="#" class="botoes__cabecalho">
+                        <i class="fa-solid fa-user"></i>
+                        <p>Sobre mim</p>
+                    </a>
+
+                    <a href="index.html#projetos" class="botoes__cabecalho">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <p>Projetos</p>
+                    </a>
+                </section>
+            </nav>
+
+            <section class="cabecalho__func">
+                <button id="btnIdioma" class="cabecalho__btn__func">en</button>
+                <button id="btnTema" class="cabecalho__btn__func"><i class="fa-solid fa-sun"></i></button>
+            </section>
+        </section>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="hero__conteudo">
+                <div class="hero__texto">
+                    <h1>Nícolas Queiroga</h1>
+                    <p class="destaque">Desenvolvedor Full Stack</p>
+                    <p>
+                        Transformo ideias em realidade através do código. Especializado em criar experiências digitais que conectam pessoas e solucionam problemas reais. Apaixonado por tecnologia, inovação e pelo impacto positivo que a programação pode gerar no mundo.
+                    </p>
+                </div>
+                <div class="hero__foto">
+                    <div class="hero__foto-container">
+                        <img src="assets/testew.jpg" alt="Nícolas Queiroga">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BIOGRAFIA -->
+        <section class="secao">
+            <h2>Quem sou eu</h2>
+            <p class="subtitulo">Uma breve introdução sobre minha trajetória e personalidade</p>
+            
+            <div class="biografia">
+                <div class="biografia__foto">
+                    <img src="assets/testew.jpg" alt="Nícolas Queiroga" class="foto-perfil">
+                </div>
+                <div class="biografia__texto">
+                    <p>
+                        Olá! Sou Nícolas Queiroga, um desenvolvedor web apaixonado por criar experiências digitais que fazem a diferença. Natural de Fortaleza, Ceará, encontrei na programação uma forma de transformar ideias em realidade e conectar pessoas através da tecnologia.
+                    </p>
+                    <p>
+                        Minha jornada no desenvolvimento começou com curiosidade e se transformou em paixão. Acredito que a tecnologia deve ser acessível, funcional e, acima de tudo, útil para as pessoas. Por isso, busco sempre criar soluções que não apenas funcionem bem, mas que também proporcionem experiências memoráveis aos usuários.
+                    </p>
+                    <p>
+                        Quando não estou codando, gosto de explorar novas tecnologias, contribuir com projetos open source e compartilhar conhecimento com a comunidade de desenvolvedores. Estou sempre em busca de novos desafios e oportunidades para crescer profissionalmente.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIÊNCIA -->
+        <section class="secao">
+            <h2>Minha Jornada</h2>
+            <p class="subtitulo">Os principais marcos da minha trajetória profissional e acadêmica</p>
+            
+            <div class="experiencia__timeline">
+                <div class="timeline__item">
+                    <div class="timeline__icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline__conteudo">
+                        <h3>Formação Acadêmica</h3>
+                        <div class="periodo">2020 - Presente</div>
+                        <p>Cursando graduação em área relacionada à tecnologia, focando em desenvolvimento de software e sistemas web. Participação ativa em projetos acadêmicos e grupos de estudo.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="timeline__conteudo">
+                        <h3>Início no Desenvolvimento</h3>
+                        <div class="periodo">2021 - 2022</div>
+                        <p>Primeiros passos no mundo da programação, aprendendo HTML, CSS e JavaScript. Desenvolvimento dos primeiros projetos pessoais e descoberta da paixão por criar interfaces interativas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__icon">
+                        <i class="fa-solid fa-rocket"></i>
+                    </div>
+                    <div class="timeline__conteudo">
+                        <h3>Projetos e Crescimento</h3>
+                        <div class="periodo">2023 - 2024</div>
+                        <p>Expansão das habilidades para tecnologias back-end como Node.js e Java. Desenvolvimento de projetos mais complexos, incluindo sistemas com banco de dados e APIs.</p>
+                    </div>
+                </div>
+
+                <div class="timeline__item">
+                    <div class="timeline__icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div class="timeline__conteudo">
+                        <h3>Desenvolvedor Full Stack</h3>
+                        <div class="periodo">2024 - Presente</div>
+                        <p>Atuando como desenvolvedor full stack, criando soluções completas desde o front-end até o back-end. Foco em React, Node.js e tecnologias modernas para desenvolvimento web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- VAMOS TRABALHAR JUNTOS -->
+        <section class="secao">
+            <h2>Vamos Trabalhar Juntos?</h2>
+            <p class="subtitulo">Estou sempre aberto a novos desafios e oportunidades de colaboração</p>
+            
+            <div class="colaboracao__container">
+                <div class="colaboracao__principal">
+                    <div class="colaboracao__texto">
+                        <h3>Pronto para o Próximo Projeto</h3>
+                        <p>Se você tem uma ideia, um problema para resolver ou simplesmente quer bater um papo sobre tecnologia, ficarei feliz em conversar. Adoro trabalhar com pessoas que compartilham a paixão por criar algo incrível.</p>
+                        
+                        <div class="colaboracao__cta">
+                            <a href="mailto:nicolasqueirogapaix@gmail.com" class="btn__contato">
+                                <i class="fa-solid fa-envelope"></i>
+                                Entre em Contato
+                            </a>
+                            <a href="https://github.com/nicoquei" target="_blank" class="btn__github">
+                                <i class="fa-brands fa-github"></i>
+                                Ver no GitHub
+                            </a>
+                        </div>
+                    </div>
+                    <div class="colaboracao__visual">
+                        <div class="colaboracao__icone">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projetos__tipos">
+                    <h4>Tipos de Projetos que Aceito:</h4>
+                    <div class="tipos__lista">
+                        <div class="tipo__item">
+                            <i class="fa-solid fa-laptop-code"></i>
+                            <span>Sites e Landing Pages</span>
+                        </div>
+                        <div class="tipo__item">
+                            <i class="fa-solid fa-store"></i>
+                            <span>E-commerce e Catálogos</span>
+                        </div>
+                        <div class="tipo__item">
+                            <i class="fa-solid fa-cogs"></i>
+                            <span>Sistemas Web</span>
+                        </div>
+                        <div class="tipo__item">
+                            <i class="fa-solid fa-mobile-alt"></i>
+                            <span>Aplicações Responsivas</span>
+                        </div>
+                        <div class="tipo__item">
+                            <i class="fa-solid fa-rocket"></i>
+                            <span>Projetos Inovadores</span>
+                        </div>
+                        <div class="tipo__item">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Colaborações Open Source</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <section class="enquadra">
+            <section class="footer__sobre">
+                <div class="footer__sobre__info">
+                    <h3>Nícolas Queiroga</h3>
+                    <p>Desenvolvedor web focado em criar soluções digitais modernas, funcionais e de alto desempenho. Sempre em evolução, explorando novas tecnologias e enfrentando novos desafios.</p>
+                </div>
+
+                <div class="footer__sobre__redes">
+                    <a href="https://github.com/nicoquei" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="www.linkedin.com/in/nicoquei" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nicoqueip" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </section>
+
+            <section class="footer__final">
+                <p>&copy; 2024 Nícolas Queiroga. Todos os direitos reservados.</p>
+            </section>
+        </section>
+    </footer>
+
+    <script>
+        // Funcionalidade do tema
+        const btnTema = document.getElementById('btnTema');
+        const body = document.body;
+        
+        btnTema.addEventListener('click', () => {
+            body.classList.toggle('day');
+            const icon = btnTema.querySelector('i');
+            
+            if (body.classList.contains('day')) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+        });
+
+        // Scroll effect no cabeçalho
+        window.addEventListener('scroll', () => {
+            const cabecalho = document.querySelector('.cabecalho');
+            if (window.scrollY > 50) {
+                cabecalho.classList.add('scroll');
+            } else {
+                cabecalho.classList.remove('scroll');
+            }
+        });
+
+        // Logo rotation
+        const logo = document.getElementById('logo');
+        logo.addEventListener('click', () => {
+            logo.style.transform = 'rotate(360deg)';
+            setTimeout(() => {
+                logo.style.transform = 'rotate(0deg)';
+            }, 500);
+        });
+    </script>
+
+</body>
+</html>

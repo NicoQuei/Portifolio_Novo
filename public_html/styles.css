@@ -760,6 +760,7 @@ footer {
 
 .sobreMim {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -769,15 +770,16 @@ footer {
     justify-content: center;
     align-items: center;
     width: 90%;
-    margin-top: 5rem;
-    gap: 30%;
+    margin: 10rem 0;
+    gap: 10%;
+    
 }
 
 .apresentacao__sobreMim__texto {
     display: flex;
     flex-direction: column;
+    width: 55%;
     gap: 2rem;
-    width: 50%;
 }
 
 .apresentacao__sobreMim__texto h1 {
@@ -785,6 +787,66 @@ footer {
     font-size: 3.5rem;
 }
 
+.apresentacao__sobreMim__texto span {
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.apresentacao__sobreMim__texto p {
+    font-size: 1.1rem;
+    color: var(--cor-card-p);
+}
+
 .apresentacao__sobreMim img {
-    width: 10%;
+    width: 20%;
+    border-radius: 50%;
+}
+
+.quemSouEu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 5rem;
+}
+
+.quemSouEu h2 {
+    font-size: 3rem;
+    align-items: center;
+    color: var(--cor-titulo);
+}
+
+.quemSouEu p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.quemSouEu__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.quemSouEu__container img {
+    width:20%;
+    border-radius: 50%;
+    border: solid 5px var(--cor-titulo);
+    
+}
+
+.quemSouEu__container__texto {
+    width: 50%;
+}
+
+.quemSouEu__container__texto p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    color: var(--cor-card-p);
+    line-height: 1.7;
+}
+
+.teste {
+    line-height: 1;
 }

@@ -817,11 +817,6 @@ footer {
     color: var(--cor-titulo);
 }
 
-.quemSouEu p {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-}
-
 .quemSouEu__container {
     display: flex;
     justify-content: center;
@@ -832,7 +827,7 @@ footer {
 .quemSouEu__container img {
     width:20%;
     border-radius: 50%;
-    border: solid 5px var(--cor-titulo);
+    border: solid 4px var(--cor-titulo);
     
 }
 
@@ -841,12 +836,76 @@ footer {
 }
 
 .quemSouEu__container__texto p {
-    margin: 1rem 0;
+    margin: 1.5rem 0;
     font-size: 1.1rem;
     color: var(--cor-card-p);
     line-height: 1.7;
+    text-align: justify;
 }
 
-.teste {
-    line-height: 1;
+.minhaJornada {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20rem;
 }
+
+.minhaJornada h2 {
+    color: var(--cor-titulo);
+    font-size: 3rem;
+}
+
+.minhaJornada__grade {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.5rem;
+    gap: 2rem;
+}
+
+.minhaJornada__grade__card {
+    display: flex;
+    align-items: center;
+    background-color: var(--cor-card-bg);
+    border-radius: 1rem;
+    border-left: solid 4px var(--cor-titulo);
+    width: 65%;
+}
+
+.minhaJornada__grade__card i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    font-size: 2rem;
+    background-color: var(--cor-titulo);
+    color: var(--cor-fundo);
+    border-radius: 50%;
+    width: 10rem;
+    height: 6rem;
+}
+
+.minhaJornada__grade__card__texto {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.minhaJornada__grade__card__texto h3 {
+    color: var(--cor-titulo);
+    font-size: 1.5rem;
+}
+
+.minhaJornada__grade__card__texto span {
+    font-size: 1.2rem;
+
+}
+
+.minhaJornada__grade__card__texto p {
+    color: var(--cor-card-p);
+    width: 90%;
+}
+

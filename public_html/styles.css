@@ -879,12 +879,21 @@ footer {
     justify-content: center;
     align-items: center;
     margin: 2rem;
-    font-size: 2rem;
+    font-size: 2.2rem;
     background-color: var(--cor-titulo);
     color: var(--cor-fundo);
     border-radius: 50%;
     width: 90px;
     height: 90px;
+}
+
+.minhaJornada__grade__card i.fa-laptop-code {
+    width: 70px;
+    height: 70px;
+}
+
+.minhaJornada__grade__card i.fa-cogs {
+    font-size: 2.5rem; /* aumenta só esse */
 }
 
 .minhaJornada__grade__card__texto {

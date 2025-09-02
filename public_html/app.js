@@ -103,10 +103,10 @@ btnTema.addEventListener('click', () => {
 // Faz os elementos aparecerem de acordo com o Scroll
 
 ScrollReveal().reveal('.reveal', {
-  duration: 1000,
+  duration: 600,
   origin: 'bottom',
   distance: '50px',
-  interval: 150
+  interval: 120
 });
 
 //Função pra abrir nav no celular

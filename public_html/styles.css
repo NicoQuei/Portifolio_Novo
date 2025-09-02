@@ -537,16 +537,13 @@ footer {
     align-items: center;
     text-decoration: none;
     gap: 0.5rem;
-}
-
-.nav__item a {
     color: var(--cor-texto);
-    text-decoration: none;
+    transition: all 0.3s ease;
 }
 
-.nav__item a:hover {
-    color: #00A3FF;
-    transition: all 0.5s ease;
+.nav__item:hover {
+    color: var(--cor-titulo);
+    transform: scale(1.05);
 }
 
 .footer__links__contato {
@@ -561,6 +558,20 @@ footer {
     align-items: center;
     display: flex;
     gap: 0.5rem;
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: all 0.3s ease;
+}
+
+.email:hover {
+    transform: scale(1.05);
+    color: var(--cor-titulo);
 }
 
 .footer__final {

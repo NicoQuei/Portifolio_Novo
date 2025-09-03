@@ -135,27 +135,37 @@ body.day {
 
 .respondoRapido__sub p {
     color: var(--cor-titulo);
+    font-weight: 500;
 }
 
 .painel {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: green;
+    background-color: var(--cor-card-bg);
     margin-top: 5rem;
     border-radius: 1rem;
-    padding: 0 6rem;
+    padding: 0 3rem;
 }
 
 .painel h2 {
     color: var(--cor-titulo);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.3rem;
+    margin-top: 2rem;
+    
 }
 
 .painel p {
     text-align: center;
+    color: var(--cor-card-p);
     margin-bottom: 2rem;
+}
+
+.grade__input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 2rem;
 }
 
 .input {
@@ -165,11 +175,24 @@ body.day {
 }
 
 .input p {
-    margin: 0;
+    color: var(--cor-texto);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
 }
 
-.input input {
-    display: flex;
-    width: 80%;
-    background-color: rgb(37, 33, 33);
+.input input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    background: var(--cor-fundo);
+    border: 2px solid transparent;
+    border-radius: 1rem;
+    color: var(--cor-texto);
+    font-size: 1rem;
 }
+
+.input textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+

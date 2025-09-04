@@ -89,10 +89,11 @@ html {
 
 .cabecalho img {
     width: 70px;
+    transition: all 1s ease;
 }
 
 .cabecalho img:hover {
-    transform: scale(1.2) rotate(360deg);
+    transform: rotate(360deg);
 }
 
 .cabecalho__info__botoes {

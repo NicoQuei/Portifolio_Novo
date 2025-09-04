@@ -10,6 +10,57 @@
 </head>
 <body>
 
+    <!-- Preloader -->
+
+    <div id="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- CABECALHO -->
+
+    <header class="cabecalho">
+
+        <section class="cabecalho__info">
+            <img src="/public_html/assets/logo N.png" alt="logo N" id="logo">
+
+            <nav>
+                <section class="cabecalho__info__botoes" id="menu">
+                    <a href="/public_html/index.html" id="" class="botoes__cabecalho">
+                        <i class="fa-solid fa-home home-icon"></i>
+                        <p id="btn1">Home</p>
+                    </a>
+                    
+                    <a href="/public_html/sobre.html" id="" class="botoes__cabecalho">
+                        <i class="fa-solid fa-user"></i>
+                        <p id="btn2">Sobre mim</p>
+                    </a>
+
+                    <a href="#" id="" class="botoes__cabecalho">
+                        <i class="fa-solid fa-briefcase"></i>
+                        <p id="btn3">Projetos</p>
+                    </a>
+
+                    <a href="contato.html" class="botoes__cabecalho">
+                        <i class="fa-solid fa-envelope"></i>
+                        <p>Contato</p>
+                    </a>
+                </section>
+            </nav>
+
+            <section class="cabecalho__func">
+                <button id="btnIdioma" class="cabecalho__btn__func">en</button>
+                <button id="btnTema" class="cabecalho__btn__func"><i class="fa-solid fa-sun"></i></button>
+            </section>
+
+            <button class="hamburguer" id="hamburguer">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+        </section>
+    </header>
+
+    <!-- MAIN -->
+
     <main class="paginaContato">
         <section class="conteudo">
                 <div class="entreEmContato">
@@ -33,6 +84,15 @@
                     </div>
                 </div>
 
+                <div class="conexoes">
+                    <p>Ou me encontre nas redes:</p>
+                    <div class="conexoes__icons">
+                       <a href="#"><i class="fa-brands fa-github"></i></a>
+                       <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                       <a href="#"><i class="fa-brands fa-instagram"></i></a> 
+                    </div>
+                </div>
+
                 <!-- PARTE DOS INPUTS -->
 
             </section>
@@ -53,7 +113,7 @@
 
                     <div class="input">
                         <p>Mensagem</p>
-                        <textarea name="mensagem" id="" placeholder="Me conte sobre seu projeto, tire duvidas"></textarea>
+                        <textarea name="mensagem" id="" placeholder="Me conte sobre seu projeto, ideas ou  duvidas..."></textarea>
                     </div>
                 </div>
                 
@@ -64,6 +124,94 @@
 
         </section>
     </main>
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <section class="enquadra">
+
+            <!-- PRIMEIRO -->
+
+            <section class="footer__sobre">
+                <div class="footer__sobre__info">
+                    <h3>Nícolas Queiroga</h3>
+                    <p>Desenvolvedor web focado em criar soluções digitais modernas, funcionais e de alto desempenho. Sempre em evolução, explorando novas tecnologias e enfrentando novos desafios.</p>
+                </div>
+
+                <div class="footer__sobre__redes">
+                    <a href="https://github.com/nicoquei" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/n%C3%ADcolas-queiroga-644482304/" target="_blank">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.instagram.com/nicoqueip" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SEGUNDO -->
+
+            <section class="footer__links">
+
+                <div class="footer__links__nav">
+                    <nav>
+                        
+                        <a href="index.html" class="nav__item">
+                            <i class="fa-solid fa-home"></i>
+                            <p>Home</p>
+                        </a>
+                        <a href="sobre.html" class="nav__item">
+                            <i class="fa-solid fa-user"></i>
+                            <p>Sobre mim</p>
+                        </a>
+                        <a href="index.html" class="nav__item">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <p>Projetos</p>
+                        </a>
+                        <a href="index.html" class="nav__item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>Contato</p>
+                        </a>
+                        
+                    </nav>
+                </div>
+
+                <div class="footer__links__contato">
+
+                    <div class="footer__links__contato__item">
+                        <a href="mailto:dev@nicoquei.com" class="email">
+                            <i class="fas fa-envelope"></i>
+                            <p>nicolasqueirogapaix@gmail.com</p>
+                        </a>
+                    </div>
+
+                    <div class="footer__links__contato__item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Fortaleza, Ceará</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- TERCEIRO -->
+
+            <section class="footer__final">
+                <p>&copy; 2025 Nícolas Queiroga. Todos os direitos reservados.</p>
+                <div class="footer__final__links">
+                    <a href="#"">Política de Privacidade</a>
+                    <a href="#">Termos de Uso</a>
+                </div>
+            </section>
+
+        </section>
+
+    </footer>
+
+    <script src="/public_html/app.js"></script>
     
 </body>
 </html>

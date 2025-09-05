@@ -53,6 +53,5 @@ document.addEventListener('DOMContentLoaded', function() {
             button.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Enviar email';
             button.disabled = false;
         }
->>>>>>> Stashed changes
     });
 });

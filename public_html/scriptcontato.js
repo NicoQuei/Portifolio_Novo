@@ -1,24 +1,21 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Inicializa EmailJS
-    emailjs.init('YhNNDbtCDmq9DmNvT'); // seu User ID
+// Usando a versão mais simples do EmailJS v4+ via CDN
+import { sendForm } from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
 
-    const form = document.getElementById('contato-form');
-    const feedback = document.getElementById('feedback');
+const form = document.getElementById('contact-form');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Evita o envio tradicional
 
-        emailjs.sendForm('service_niw39h4', 'template_0yfqo4u', this)
-            .then((response) => {
-                console.log('Sucesso!', response.status, response.text);
-                feedback.textContent = 'Mensagem enviada com sucesso!';
-                feedback.className = 'success';
-                form.reset(); // limpa o formulário
-            })
-            .catch((err) => {
-                console.error('Erro:', err);
-                feedback.textContent = 'Erro ao enviar mensagem. Verifique os IDs e tente novamente.';
-                feedback.className = 'error';
-            });
+    sendForm(
+        'service_niw39h4',   // Substitua pelo seu Service ID
+        'template_qa7osh9',  // Substitua pelo seu Template ID
+        form,
+        'YhNNDbtCDmq9DmNvT'    // Substitua pela sua Public Key
+    )
+    .then(() => {
+        alert('Mensagem enviada! Obrigado pelo contato.');
+    })
+    .catch(() => {
+        alert('Ops! Algo deu errado. Tente novamente.');
     });
 });

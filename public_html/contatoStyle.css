@@ -30,6 +30,26 @@ body {
     width: 100%;
 }
 
+.form-message {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+.form-message.success {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.form-message.error {
+    background-color: #f44336;
+    color: white;
+}
+
+
 body.day {
     --cor-fundo: #e6e7e9;
     --cor-texto: #0F111A;

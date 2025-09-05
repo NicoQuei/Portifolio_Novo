@@ -7,14 +7,13 @@
     <link rel="stylesheet" href="contatoStyle.css">
     <link rel="shortcut icon" href="assets/logo N.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+    <script type="module" src="scriptcontato.js"></script>
 </head>
 <body>
 
     <!-- Preloader -->
 
-    <div id="preloader">
-        <div class="spinner"></div>
-    </div>
+   
 
     <!-- CABECALHO -->
 
@@ -96,33 +95,36 @@
                 <!-- PARTE DOS INPUTS -->
 
             </section>
-            <form class="painel">
+            <form class="painel" id="contact-form">
                 <h2>Envie uma mensagem</h2>
                 <p>Preencha o formulário abaixo e retornarei o contato em breve!</p>
 
                 <div class="grade__input">
                     <div class="input">
                         <p>Nome</p>
-                        <input type="text" placeholder="Digite seu nome">
+                        <input type="text" name="from_name" placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="input">
                         <p>Email</p>
-                        <input type="email" placeholder="Digite seu email">
+                        <input type="email" name="reply_to" placeholder="Digite seu email" required>
                     </div>
 
                     <div class="input">
                         <p>Mensagem</p>
-                        <textarea name="mensagem" id="" placeholder="Me conte sobre seu projeto, ideas ou  duvidas..."></textarea>
+                        <textarea name="message" placeholder="Me conte sobre seu projeto, ideias ou dúvidas..." required></textarea>
                     </div>
                 </div>
                 
-                <button>
+                <button type="submit">
                     <i class="fa-solid fa-paper-plane"></i>
                     Enviar email
                 </button>
 
+                <!-- Mensagem de notificação -->
+                <div id="form-message" class="form-message"></div>
             </form>
+
     </main>
 
     <!-- FOOTER -->

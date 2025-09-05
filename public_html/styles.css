@@ -226,8 +226,7 @@ body.day {
 
 .apresentacao a {
     margin-top: 1rem;
-    color: var(--cor-fundo);
-    background-color: var(--cor-texto);
+    color: black;
     text-align: center;
     font-size: 1.2rem;
     text-decoration: none;

@@ -27,6 +27,7 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     min-height: 100vh;
+    width: 100%;
 }
 
 body.day {
@@ -176,21 +177,28 @@ body.day {
 
 /* MAIN */
 
+.conteudo {
+    display: flex;
+    flex-direction: column;
+}
+
 .paginaContato {
     display: flex;
+    width: 100%;
 }
 
 .entreEmContato {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
-    width: 70%;
+    gap: 4%;
+    min-width: 70%;
+    max-width: 70%;
     border: 2px solid var(--cor-titulo);
     border-radius: 2rem;
     background: linear-gradient(135deg, var(--cor-card-bg), rgba(0, 209, 255, 0.1));
-    margin-top: 7rem;
-    margin-left: 9rem;
+    margin-top: 13%;
+    margin-left: 15%;
 }
 
 .entreEmContato i {
@@ -198,33 +206,35 @@ body.day {
     border-radius: 50%;
     font-size: 2.5rem;
     background: rgba(0, 209, 255, 0.1);
-    margin-left: 1rem;
+    margin-left: 2rem;
     color: var(--cor-titulo);
-    animation: pulse 1s ease-in-out infinite alternate;
+    animation: pulse 2s ease-in-out infinite alternate;
 }
 
 @keyframes pulse {
     to {
-        transform: scale(1.05);
+        transform: scale(1.1);
     }
 }
 
 .entreEmContato__texto {
     display: flex;
     flex-direction: column;
-    margin: 3rem 0;
+    margin: 3rem 0 3rem 0;
+    max-width: 100%;
+    height: auto;
 }
 
 .entreEmContato__texto h2 {
     color: var(--cor-titulo);
     font-size: 2.5rem;
-    
+    max-width: 100%;
 }
 
 .entreEmContato__texto p {
     color: var(--cor-card-p);
     font-size: 1.2rem;
-    width: 100%;
+    width: 95%;
     margin-bottom: 1rem;
 }
 
@@ -237,8 +247,9 @@ body.day {
     border: 2px solid var(--cor-titulo);
     border-radius: 2rem;
     text-align: center;
-    width: 17rem;
-    height: 3rem;
+    padding: 1rem;
+    height: 1rem;
+    max-width: 80%;
     font-size: 1.3rem;
     font-weight: 600;
     background-color: rgba(0, 209, 255, 0.1);
@@ -256,8 +267,8 @@ body.day {
     flex-direction: column;
     background-color: var(--cor-card-bg);
     width: 70%;
-    margin-top: 4rem;
-    margin-left: 9rem;
+    margin-top: 7%;
+    margin-left: 15%;
     border-radius: 1rem;
 }
 
@@ -296,8 +307,8 @@ body.day {
 .conexoes {
     display: flex;
     flex-direction: column;
-    margin-left: 9rem;
-    margin-top: 3rem;
+    margin-left: 15%;
+    margin-top: 5%;
 }
 
 .conexoes p {
@@ -341,9 +352,9 @@ body.day {
     flex-direction: column;
     text-align: center;
     background-color: var(--cor-card-bg);
-    margin: 6rem 9rem 5rem 0;
+    margin: 6% 5% 5% 0;
     border-radius: 2rem;
-    padding: 0 5rem;
+    padding: 0 5%;
 }
 
 .painel h2 {
@@ -393,6 +404,12 @@ textarea {
     min-height: 100px;
 }
 
+.input input:focus,
+.input textarea:focus {
+    outline: none;
+    border-color: var(--cor-titulo);
+}
+
 .painel button {
     background: linear-gradient(135deg, var(--cor-fundo), var(--cor-titulo));
     padding: 1rem;
@@ -428,6 +445,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    width: 100%;
 }
 
 .footer__sobre {
@@ -558,4 +576,160 @@ footer {
 .footer__final__links a:hover {
     color: #00A3FF;
     transition: all 0.5s ease;
+}
+
+@media (max-width: 1000px) {
+
+    /* MAIN */
+
+    .paginaContato {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .conteudo {
+        flex-direction: column;
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .entreEmContato {
+        min-width: 80%;
+        margin: 4rem 0;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .entreEmContato i {
+        margin: 2rem 0 0 0;
+    }
+
+    .entreEmContato__texto p {
+        align-self: center;
+    }
+
+    .entreEmContato__texto a {
+        align-self: center;
+        text-size-adjust: auto;
+
+    }
+
+    .respondoRapido {
+        margin: 0;
+        width: 80%;
+    }
+
+    .respondoRapido__texto {
+        padding: 2rem;
+        text-align: center;
+        margin: 0;
+    }
+
+    .respondoRapido__texto h2 {
+        font-size: 2rem;
+    }
+
+    .respondoRapido__texto p {
+        font-size: 1.3rem;
+    }
+
+    .respondoRapido__sub {
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    .respondoRapido__sub p {
+        font-size: 1rem;
+    }
+
+    .conexoes {
+        margin: 3rem 0 2rem 0;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .conexoes p {
+        font-size: 1.3rem;
+    }
+
+    .conexoes__icons a {
+        font-size: 1.7rem;
+    }
+
+    .painel {
+        margin: 7rem 0 0 0;
+        width: 80%;
+    }
+
+    .input input,
+    textarea {
+        width: 90%;
+    }
+
+    /* HEADER */
+
+    .hamburguer {
+        display: block;
+    }
+    
+    .cabecalho__info__botoes {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 0.5rem;
+        top: 8.5vh;
+        right: 1vh;
+        background: var(--cor-card-bg);
+        position: absolute;
+        border-radius: 1rem;
+        padding: 1rem;
+    }
+
+    .cabecalho__info__botoes.active {
+        display: flex; 
+    }
+
+    /* FOOTER */
+
+    .footer__sobre__info p{
+        width: 80%;
+    }
+
+    .footer__sobre__redes {
+        flex-direction: column;
+        margin-right: 3rem;
+    }
+
+    .footer__links__contato {
+        flex-direction: column;
+    }
+
+    .footer__links__nav nav {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer__links__contato__item p {
+        max-width: 90%;
+    }
+
+    .footer__final {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footer__final p {
+        text-align: center;
+    }
+
+    .footer__links {
+        flex-direction: column;
+        gap: 2rem;
+    }   
 }
